@@ -42,7 +42,7 @@ nav a:hover, nav a:focus {
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
 
-@media screen and (max-width: 799px) {
+
      
 
 
@@ -124,6 +124,7 @@ first div in the grid  and place it in the grid. */
  /*Is centered horizontally and vertically with centered text.*/
  .text-block{
      align-self: center;
+     text-align: center;
  }
 
  .text-block p{
@@ -131,8 +132,8 @@ first div in the grid  and place it in the grid. */
  }
 
 
- 
-}
+
+
 
 
 /* Add your media query here */
@@ -141,16 +142,21 @@ first div in the grid  and place it in the grid. */
   /* Step 9: Write the selector/rule property to style the nav element */
 
      nav{
-          grid-column: 4 / 5;
+          width: 100%;
           padding: 30px 0;
+     }
+
+     nav ul{
+          text-align: right;
      }
   /* Step 10: Write the selector/rule property to update the .container class */
 
+  .container {
+     display: grid;
+     grid-template-columns: 50px auto 500px auto 50px;
+     column-gap: 20px;
+ }
 
-     .container {
-          display: grid;
-          grid-template-columns: 50px auto 500px auto 50px;
-      }
 
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
@@ -169,7 +175,7 @@ first div in the grid  and place it in the grid. */
 
      .text-block{
           max-height: 250px;
-          overflow: auto;
+          overflow-y: auto;
      }
 }
 
